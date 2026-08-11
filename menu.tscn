@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cd3c4sr8qfy57"]
+
+[ext_resource type="FontFile" uid="uid://br7xkpsx1g7if" path="res://new folder/assetpack/parallax/Diary Story.otf" id="1_lti8b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ouk20"]
+load_path = "res://.godot/imported/Sky_sky.png-784697f1ed9ea057c6717f21228a45a5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s00bm"]
+texture = SubResource("CompressedTexture2D_ouk20")
+
+[node name="menu" type="Control" unique_id=1094964178]
+layout_mode = 3
+anchor_left = 0.001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.15200007
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fundo" type="Panel" parent="." unique_id=1923166746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -4.0
+offset_right = -3.0
+offset_bottom = 352.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s00bm")
+
+[node name="titulo" type="Label" parent="." unique_id=978061290]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 168.0
+offset_right = 719.0
+offset_bottom = 323.0
+theme_override_fonts/font = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 81
+text = "Parallax"
+
+[node name="botões" type="VBoxContainer" parent="." unique_id=1301942484]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="jogar" type="Button" parent="botões" unique_id=1651742478]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 60
+text = "Jogar"
+
+[node name="sair" type="Button" parent="botões" unique_id=1353279594]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 60
+text = "Sair"
+
+[node name="jogo" type="Node2D" parent="." unique_id=455985582]
+
+[node name="player" type="CharacterBody2D" parent="jogo" unique_id=891739488]
+
+[node name="imagemplayer" type="AnimatedSprite2D" parent="jogo/player" unique_id=1683595792]
+
+[node name="corpoplayer" type="CollisionShape2D" parent="jogo/player" unique_id=569451226]
+
+[node name="esq" type="CollisionShape2D" parent="jogo" unique_id=939490945]
+
+[node name="dir" type="CollisionShape2D" parent="jogo" unique_id=940835056]
+
+[node name="teto" type="CollisionShape2D" parent="jogo" unique_id=133226547]
+
+[node name="chao" type="CollisionShape2D" parent="jogo" unique_id=2140055700]
